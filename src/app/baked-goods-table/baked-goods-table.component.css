@@ -1,0 +1,108 @@
+table {
+    width: 70%;
+    overflow: auto;
+    border-collapse: collapse;
+    position: relative;
+    margin: 0 auto;
+    background-color: #f2f2f2;
+    /* top: 90px; */
+}
+
+th.asc::after {
+    content: "▲";
+    font-size: 80%;
+    padding-left: 10px;
+}
+
+th.desc::after {
+    content: '▼';
+    font-size: 75%;
+    padding-left: 10px;
+}
+
+th.sort::after {
+    content: ' \21c5';
+    font-size: 80%;
+    padding-left: 10px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    cursor: pointer;
+    background-color: #f2f2f2;
+
+}
+
+th:hover {
+    background-color: #ddd;
+}
+
+tr:nth-child(even) {
+    background-color: #ddd;
+}
+
+/* input[type=text] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 2% auto;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+} */
+
+input {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 2% 0;
+    /* display: inline-block; */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* .btn {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 2% 2%;
+    float: right;
+    cursor: pointer;
+  } */
+
+.input-btn {
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.add-btn {
+    background-color: #432f17;
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 2% 0;
+    margin-left: auto;
+    border-radius: 4px;
+    transition: opacity 0.15s;
+}
+
+.add-btn:hover {
+    opacity: 0.8;
+}
+
+.add-btn:active {
+    opacity: 0.5;
+}

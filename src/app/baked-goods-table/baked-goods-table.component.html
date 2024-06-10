@@ -1,0 +1,33 @@
+<div class="baked-content">
+    <div class="input-btn">
+        <input type="text" placeholder="Search Baked Goods.." [ngModel]="filterText"
+            (ngModelChange)="filterBakedGoods($event)" />
+        <button class="add-btn">Add New Baked Goods</button>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th (click)="sortData('id')"
+                    [ngClass]="sortField === 'id' ? (sortOrder === 'asc' ? 'asc' : 'desc') : 'sort'">
+                    Id</th>
+                <th (click)="sortData('type')"
+                    [ngClass]="sortField === 'type' ? (sortOrder === 'asc' ? 'asc' : 'desc') : 'sort'">
+                    Type</th>
+                <th (click)="sortData('name')"
+                    [ngClass]="sortField === 'name' ? (sortOrder === 'asc' ? 'asc' : 'desc') : 'sort'">
+                    Name</th>
+                <th (click)="sortData('topping')"
+                    [ngClass]="sortField === 'topping' ? (sortOrder === 'asc' ? 'asc' : 'desc') : 'sort'">
+                    Topping</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let good of data">
+                <td>{{ good.id }}</td>
+                <td>{{ good.type }}</td>
+                <td>{{ good.name }}</td>
+                <td>{{ good.topping }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

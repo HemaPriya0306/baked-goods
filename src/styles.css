@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+body {
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    opacity: 1 !important;
+}
+
+.container::before {
+    content: "";
+    background-image: url('./assets/images/cupcake.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.75;
+}
