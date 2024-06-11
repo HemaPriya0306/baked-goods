@@ -4,32 +4,34 @@
             (ngModelChange)="filterBakedGoods($event)" />
         <button class="add-btn" (click)="openModal()">Add New Baked Goods</button>
     </div>
-    <table>
-        <thead>
-            <tr>
-                <th (click)="sortData('id')"
-                    [ngClass]="sortField === 'id' ? (sortOrder === 'asc' ? 'asc' : 'desc') : 'sort'">
-                    Id</th>
-                <th (click)="sortData('type')"
-                    [ngClass]="sortField === 'type' ? (sortOrder === 'asc' ? 'asc' : 'desc') : 'sort'">
-                    Type</th>
-                <th (click)="sortData('name')"
-                    [ngClass]="sortField === 'name' ? (sortOrder === 'asc' ? 'asc' : 'desc') : 'sort'">
-                    Name</th>
-                <th (click)="sortData('topping')"
-                    [ngClass]="sortField === 'topping' ? (sortOrder === 'asc' ? 'asc' : 'desc') : 'sort'">
-                    Topping</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let good of data">
-                <td class="good-id-col">{{ good.id }}</td>
-                <td>{{ good.type | titlecase }}</td>
-                <td>{{ good.name | titlecase }}</td>
-                <td>{{ good.topping | titlecase }}</td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="tableWrap">
+        <table>
+            <thead>
+                <tr>
+                    <th (click)="sortData('id')"
+                        [ngClass]="sortField === 'id' ? (sortOrder === 'asc' ? 'asc' : 'desc') : 'sort'">
+                        Id</th>
+                    <th (click)="sortData('type')"
+                        [ngClass]="sortField === 'type' ? (sortOrder === 'asc' ? 'asc' : 'desc') : 'sort'">
+                        Type</th>
+                    <th (click)="sortData('name')"
+                        [ngClass]="sortField === 'name' ? (sortOrder === 'asc' ? 'asc' : 'desc') : 'sort'">
+                        Name</th>
+                    <th (click)="sortData('topping')"
+                        [ngClass]="sortField === 'topping' ? (sortOrder === 'asc' ? 'asc' : 'desc') : 'sort'">
+                        Topping</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let good of data">
+                    <td class="align-center">{{ good.id }}</td>
+                    <td>{{ good.type | titlecase }}</td>
+                    <td>{{ good.name | titlecase }}</td>
+                    <td>{{ good.topping | titlecase }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
 
 <div id="myModal" class="modal" [ngClass]="showModal ? 'show' : ''">

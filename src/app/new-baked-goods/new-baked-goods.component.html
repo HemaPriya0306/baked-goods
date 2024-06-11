@@ -1,29 +1,4 @@
-<!-- <div class="baked-good-form">
-    <form (ngSubmit)="onSubmit()">
-        <label for="id">ID:</label>
-        <input type="number" id="id" [(ngModel)]="newBakedGood.id" name="id" required>
-    
-        <label for="type">Type:</label>
-        <input type="text" id="type" [(ngModel)]="newBakedGood.type" name="type" required>
-    
-        <label for="topping">Topping:</label>
-        <input type="text" id="topping" [(ngModel)]="newBakedGood.topping" name="topping" required>
-        
-        <div class="btn-group">
-            <button class="submit-btn" type="submit">Add Baked Good</button>
-            <button class="cancel-btn" (click)="cancelForm()">Cancel</button>
-        </div>
-    </form>
-</div> -->
-
 <form class="baked-good-form" [formGroup]="bakedGoodForm" (ngSubmit)="onSubmit()">
-    <!-- <div>
-        <label for="id">ID:</label><sup>*</sup>
-        <input id="id" formControlName="id" type="number">
-        <div class="input-error" *ngIf="bakedGoodForm.get('id')?.invalid && bakedGoodForm.get('id')?.touched">
-            <small>ID is required.</small>
-        </div>
-    </div> -->
     <div>
         <label for="type">Type:</label><sup>*</sup>
         <div class="input-error" *ngIf="bakedGoodForm.get('type')?.invalid && bakedGoodForm.get('type')?.touched">
@@ -46,6 +21,8 @@
         </div>
         <input id="topping" formControlName="topping" type="text">
     </div>
-    <button class="submit-btn" type="submit">Add Baked Good</button>
-    <button class="cancel-btn" type="button" (click)="cancelForm()">Cancel</button>
+    <div class="align-center">
+        <button class="submit-btn" type="submit">Submit</button>
+        <button class="cancel-btn" type="button" (click)="cancelForm()">Cancel</button>
+    </div>
 </form>

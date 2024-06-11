@@ -26,13 +26,11 @@ export class NewBakedGoodsComponent {
 
   onSubmit() {
     if (this.bakedGoodForm.valid) {
-      console.log('Form Submitted!', this.bakedGoodForm.value);
       this.bakedGoodForm.patchValue({ id: 0o7 })
       this.bakedGoodValue.emit(this.bakedGoodForm.value);
       this.bakedGoodForm.reset();
     } else {
       this.bakedGoodForm.markAllAsTouched();
-      console.log('Form is invalid!');
     }
   }
 
