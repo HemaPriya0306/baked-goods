@@ -5,7 +5,6 @@ table {
     position: relative;
     margin: 0 auto;
     background-color: #f2f2f2;
-    /* top: 90px; */
 }
 
 th.asc::after {
@@ -46,15 +45,9 @@ tr:nth-child(even) {
     background-color: #ddd;
 }
 
-/* input[type=text] {
-    width: 50%;
-    padding: 12px 20px;
-    margin: 2% auto;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-} */
+.good-id-col {
+    text-align: center;
+}
 
 input {
     width: 50%;
@@ -65,19 +58,6 @@ input {
     border-radius: 4px;
     box-sizing: border-box;
 }
-
-/* .btn {
-    background-color: #04AA6D;
-    border: none;
-    color: white;
-    padding: 12px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin: 2% 2%;
-    float: right;
-    cursor: pointer;
-  } */
 
 .input-btn {
     display: flex;
@@ -109,7 +89,6 @@ input {
 
 /* The Modal (background) */
 .modal {
-    /* opacity: 0; */
     position: fixed;
     z-index: 1;
     padding-top: 100px;
@@ -177,6 +156,7 @@ input {
     padding: 10px 12px;
 }
 
+/* modal width for small screens */
 @media screen and (max-width: 600px) {
     .modal-content {
         width: 80%;

@@ -29,16 +29,17 @@ export class NewBakedGoodsComponent {
       console.log('Form Submitted!', this.bakedGoodForm.value);
       this.bakedGoodForm.patchValue({ id: 0o7 })
       this.bakedGoodValue.emit(this.bakedGoodForm.value);
-      this.newBakedGood = {} as BakedGood;
+      this.bakedGoodForm.reset();
     } else {
       this.bakedGoodForm.markAllAsTouched();
-      console.log('Form is not valid!');
+      console.log('Form is invalid!');
     }
   }
 
   cancelForm() {
     if (confirm("You are exiting the form. Any entered data will be lost.")) {
       this.cancelClicked.emit();
+      this.bakedGoodForm.reset();
     }
   }
 

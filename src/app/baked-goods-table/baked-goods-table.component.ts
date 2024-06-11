@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { BakedGoods } from 'src/assets/mock-data';
+import { BakedGoods } from 'src/app/shared/mock-data';
 import { BakedGood } from '../models/baked-good';
+import { NotificationService } from '../services/notification.service';
 
 @Component({
   selector: 'app-baked-goods-table',
@@ -13,6 +14,8 @@ export class BakedGoodsTableComponent {
   sortOrder: string = 'asc';
   filterText: string = '';
   showModal: boolean = false;
+
+  constructor(private notificationService: NotificationService) { }
 
   sortData(field: string) {
     if (this.sortField === field) {
@@ -62,5 +65,6 @@ export class BakedGoodsTableComponent {
   addBakedGood(good: BakedGood) {
     this.data.unshift(good);
     this.closeModal();
+    this.notificationService.showNotification(`${good.name.toLocaleUpperCase()} added!`, 3000);
   }
 }

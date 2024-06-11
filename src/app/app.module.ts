@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { BakedGoodsTableComponent } from './baked-goods-table/baked-goods-table.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NewBakedGoodsComponent } from './new-baked-goods/new-baked-goods.component';
+import { NotificationComponent } from './shared/notification/notification.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BakedGoodsTableComponent,
-    NewBakedGoodsComponent
+    NewBakedGoodsComponent,
+    NotificationComponent
   ],
   imports: [
     BrowserModule,
