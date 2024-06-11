@@ -11,7 +11,6 @@ export class NewBakedGoodsComponent {
 
   @Output() cancelClicked = new EventEmitter<null>();
   @Output() bakedGoodValue = new EventEmitter<BakedGood>();
-
   newBakedGood = <BakedGood>{};
   bakedGoodForm: FormGroup;
 
@@ -34,11 +33,15 @@ export class NewBakedGoodsComponent {
     }
   }
 
-  cancelForm() {
+  closeModal() {
     if (confirm("You are exiting the form. Any entered data will be lost.")) {
       this.cancelClicked.emit();
       this.bakedGoodForm.reset();
     }
+  }
+
+  cancelForm() {
+    this.closeModal();
   }
 
 }
