@@ -7,13 +7,15 @@ import { BakedGoodsTableComponent } from './baked-goods-table/baked-goods-table.
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NewBakedGoodsComponent } from './new-baked-goods/new-baked-goods.component';
 import { NotificationComponent } from './shared/notification/notification.component';
+import { ActivityTwoComponent } from './activities/activity-two/activity-two.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BakedGoodsTableComponent,
     NewBakedGoodsComponent,
-    NotificationComponent
+    NotificationComponent,
+    ActivityTwoComponent
   ],
   imports: [
     BrowserModule,
