@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BakedGoodsTableComponent } from './baked-goods-table/baked-goods-table.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NewBakedGoodsComponent } from './new-baked-goods/new-baked-goods.component';
 
 @NgModule({
@@ -16,7 +16,8 @@ import { NewBakedGoodsComponent } from './new-baked-goods/new-baked-goods.compon
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -12,6 +12,7 @@ export class BakedGoodsTableComponent {
   sortField: string = '';
   sortOrder: string = 'asc';
   filterText: string = '';
+  showModal: boolean = false;
 
   sortData(field: string) {
     if (this.sortField === field) {
@@ -50,4 +51,16 @@ export class BakedGoodsTableComponent {
     }
   }
 
+  openModal() {
+    this.showModal = true;
+  }
+
+  closeModal() {
+    this.showModal = !this.showModal;
+  }
+
+  addBakedGood(good: BakedGood) {
+    this.data.unshift(good);
+    this.closeModal();
+  }
 }
