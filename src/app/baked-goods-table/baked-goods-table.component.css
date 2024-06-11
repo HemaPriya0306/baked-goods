@@ -141,12 +141,6 @@ input {
 .modal-header {
     padding: 12px 10px;
     background-color: #ddd;
-
-    h2 {
-        display: inline;
-        color: #432f17;
-    }
-
     .close {
         float: right;
         color: #432f17;
@@ -154,6 +148,11 @@ input {
         font-weight: bold;
         cursor: pointer;
     }
+}
+
+h2 {
+    display: inline;
+    color: #432f17;
 }
 
 /* The Close Button */
