@@ -1,0 +1,28 @@
+<form class="baked-good-form" [formGroup]="bakedGoodForm" (ngSubmit)="onSubmit()">
+    <div>
+        <label for="type">Type:</label><sup>*</sup>
+        <div class="input-error" *ngIf="bakedGoodForm.get('type')?.invalid && bakedGoodForm.get('type')?.touched">
+            <small>Type is required.</small>
+        </div>
+        <input id="type" formControlName="type" type="text">
+
+    </div>
+    <div>
+        <label for="name">Name:</label><sup>*</sup>
+        <div class="input-error" *ngIf="bakedGoodForm.get('name')?.invalid && bakedGoodForm.get('name')?.touched">
+            <small>Name is required.</small>
+        </div>
+        <input id="name" formControlName="name" type="text">
+    </div>
+    <div>
+        <label for="topping">Topping:</label><sup>*</sup>
+        <div class="input-error" *ngIf="bakedGoodForm.get('topping')?.invalid && bakedGoodForm.get('topping')?.touched">
+            <small>Topping is required.</small>
+        </div>
+        <input id="topping" formControlName="topping" type="text">
+    </div>
+    <div class="align-center">
+        <button class="submit-btn" type="submit">Submit</button>
+        <button class="cancel-btn" type="button" (click)="cancelForm()">Cancel</button>
+    </div>
+</form>
