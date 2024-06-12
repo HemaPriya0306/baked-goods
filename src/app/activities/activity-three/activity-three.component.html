@@ -1,0 +1,9 @@
+<div class="styled-list">
+    <h2>Activity-3 Megaport Enabled Locations</h2>
+    <div *ngIf="loading">Fetching locations...</div>
+    <div *ngIf="!loading && error" class="error">{{ error }}</div>
+    <ul *ngIf="!loading && locations.length > 0">
+        <li *ngFor="let location of locations">{{ location.name }}</li>
+    </ul>
+    <div *ngIf="!loading && locations.length === 0 && !error">No locations found.</div>
+</div>
