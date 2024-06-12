@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Subscription } from 'rxjs';
 import { NotificationService } from 'src/app/services/notification.service';
 
 @Component({
@@ -10,18 +9,13 @@ import { NotificationService } from 'src/app/services/notification.service';
 export class NotificationComponent {
 
   notification: string = '';
-  notificationSubscription: Subscription = new Subscription;
 
   constructor(private notificationService: NotificationService) { }
 
   ngOnInit() {
-    this.notificationSubscription = this.notificationService.notification$.subscribe((message) => {
+    this.notificationService.notification$.subscribe((message) => {
       this.notification = message;
     });
   }
 
-  ngOnDestroy() {
-    debugger;
-    this.notificationSubscription.unsubscribe();
-  }
 }
