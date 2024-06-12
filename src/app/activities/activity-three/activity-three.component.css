@@ -1,0 +1,52 @@
+/* Common styles for the list */
+.styled-list {
+    list-style-type: none;
+    background-color: #c6bcbcbd;
+    border: 1px solid #432f17;
+    padding: 15px 4px 15px 15px;
+    width: 60%;
+    margin: 25px auto;
+    text-align: center;
+}
+
+.styled-list li {
+    background: #fff;
+    opacity: 0.7;
+    margin: 5px 12px 5px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    position: relative;
+    transition: background 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    position: sticky;
+    top: 0;
+    color: #432f17;
+}
+
+ul {
+    padding-left: 0;
+    height: 500px;
+    overflow: auto;
+}
+
+/* Alternating row colors */
+.styled-list li:nth-child(even) {
+    background-color: #ddd;
+}
+
+.styled-list li:hover {
+    background-color: #ddd;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .styled-list {
+        width: 80%;
+    }
+}

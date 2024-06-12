@@ -3,22 +3,36 @@
 }
 
 .code-container {
-    border: 1px solid white;
-    background: #fdfbe3c7;
+    border: 1px solid #432f17;
+    background: #c6bcbcbd;
     padding: 30px;
     width: 50%;
     margin: auto;
 }
 
 .output-box {
-    border: 1px solid black;
-    background-color: aliceblue;
+    /* border: 1px solid black; */
+    background-color: #ddd;
     margin: auto;
-    width: 28%;
+    width: 40%;
     text-align: center;
-    padding-top: 5px;
+    padding: 5px;
 }
 
 pre {
-    background-color: aliceblue;
+    background-color: #ddd;
+    padding: 0 5px;
+}
+
+
+code, .output-box {
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .output-box {
+        width: 80%;
+    }
 }
