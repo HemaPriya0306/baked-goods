@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   appName: string = "Baked Goods";
+  menuActive = false;
+
+  toggleMenu() {
+    debugger;
+    this.menuActive = !this.menuActive;
+  }
 }

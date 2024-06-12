@@ -5,6 +5,7 @@
 
 .header {
     overflow: hidden;
+    background-color: #c6bcbc38;
     border-bottom: solid 1px #ddd;
     padding: 0px 5px;
     position: fixed;
@@ -25,50 +26,58 @@
 }
 
 .header a {
-    /* color: black;
-    text-align: center;
-    padding: 12px;
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 25px;
-    border-radius: 4px; */
-    /* color: #432f17; */
     text-align: center;
     padding: 8px 15px;
     text-decoration: none;
     font-size: 18px;
     line-height: 25px;
-    border-radius: 4px;
-    background-color: #ddd;
-    color: #432f17;
+    color: #fff;
     margin-right: 5px;
-    transition: background-color 0.15s;
+    transition: color 0.15s;
+    font-weight: bold;
 }
 
 .header a:hover {
-    background-color: #432f17bd;
-    color: whitesmoke;
+    color: #432f17;
 }
 
 .header a.active {
-    background-color: #432f17;
-    color: whitesmoke;
+    color: #432f17;
 }
 
 .header-right {
-    margin-top: 15px;
+    margin-top: 18px;
     margin-right: 15px;
     float: right;
 }
 
-@media screen and (max-width: 500px) {
+.big-menu {
+    display: block;
+}
+
+.small-menu {
+    display: none;
+}
+
+@media screen and (max-width: 560px) {
     .header a {
-        float: none;
+        float: right;
         display: block;
         text-align: left;
     }
 
-    .header-right {
-        float: none;
+    .small-menu a {
+        display: inline-block;
+        text-align: left;
+        margin: 0;
+        padding: 0 5px 0 0 !important;
+    }
+
+    .big-menu {
+        display: none;
+    }
+
+    .small-menu {
+        display: block;
     }
 }
