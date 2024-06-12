@@ -5,11 +5,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BakedGoodsTableComponent } from './baked-goods-table/baked-goods-table.component';
-import { NewBakedGoodsComponent } from './new-baked-goods/new-baked-goods.component';
+import { BakedGoodsTableComponent } from './activities/activity-one/baked-goods-table/baked-goods-table.component';
+import { NewBakedGoodsComponent } from './activities/activity-one/new-baked-goods/new-baked-goods.component';
 import { NotificationComponent } from './shared/notification/notification.component';
 import { ActivityTwoComponent } from './activities/activity-two/activity-two.component';
 import { ActivityThreeComponent } from './activities/activity-three/activity-three.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { ActivityThreeComponent } from './activities/activity-three/activity-thr
     NewBakedGoodsComponent,
     NotificationComponent,
     ActivityTwoComponent,
-    ActivityThreeComponent
+    ActivityThreeComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

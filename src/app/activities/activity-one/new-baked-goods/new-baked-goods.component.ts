@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { BakedGood } from '../models/baked-good';
+import { BakedGood } from '../../../models/baked-good';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({

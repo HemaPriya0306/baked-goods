@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { BakedGoods } from 'src/app/shared/mock-data';
-import { BakedGood } from '../models/baked-good';
-import { NotificationService } from '../services/notification.service';
+import { BakedGood } from '../../../models/baked-good';
+import { NotificationService } from '../../../services/notification.service';
 
 @Component({
   selector: 'app-baked-goods-table',
